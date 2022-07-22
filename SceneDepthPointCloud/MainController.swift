@@ -123,6 +123,7 @@ final class MainController: UIViewController, ARSessionDelegate {
         
         case showSceneButton:
             self.renderer.showConfi()
+            print("call func")
             renderer.isInViewSceneMode = !renderer.isInViewSceneMode
             if !renderer.isInViewSceneMode {
                 renderer.showParticles = true
