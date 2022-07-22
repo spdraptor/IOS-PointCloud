@@ -58,7 +58,7 @@ vertex void unprojectVertex(uint vertexID [[vertex_id]],
     const auto confidence = confidenceTexture.sample(colorSampler, texCoord).r;
     
     // Write the data to the buffer
-    if ((confidence == 1 ) && (depth > 1.0 && depth < 2.0)){
+    if ((depth > 1.0 && depth < 2.0)){
     particleUniforms[currentPointIndex].position = position.xyz;
     particleUniforms[currentPointIndex].color = sampledColor;
     particleUniforms[currentPointIndex].confidence = confidence;

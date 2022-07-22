@@ -143,6 +143,7 @@ final class MainController: UIViewController, ARSessionDelegate {
             self.toggleParticlesButton.setBackgroundImage(.init(systemName: iconName), for: .normal)
             
         default:
+            self.renderer.showConfi()
             break
         }
     }
