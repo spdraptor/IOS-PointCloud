@@ -101,7 +101,7 @@ final class MainController: UIViewController, ARSessionDelegate {
     
     @objc
     func viewValueChanged(view: UIView) {
-        self.renderer.showConfi()
+        
         switch view {
         case confidenceControl:
             renderer.confidenceThreshold = confidenceControl.selectedSegmentIndex
@@ -122,6 +122,7 @@ final class MainController: UIViewController, ARSessionDelegate {
             goToSaveCurrentScanView()
         
         case showSceneButton:
+            self.renderer.showConfi()
             renderer.isInViewSceneMode = !renderer.isInViewSceneMode
             if !renderer.isInViewSceneMode {
                 renderer.showParticles = true
