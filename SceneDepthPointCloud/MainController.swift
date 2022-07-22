@@ -122,8 +122,8 @@ final class MainController: UIViewController, ARSessionDelegate {
             goToSaveCurrentScanView()
         
         case showSceneButton:
-            self.renderer.showConfi()
-            print("call func")
+//            self.renderer.showConfi()
+//            print("call func")
             renderer.isInViewSceneMode = !renderer.isInViewSceneMode
             if !renderer.isInViewSceneMode {
                 renderer.showParticles = true
@@ -144,6 +144,7 @@ final class MainController: UIViewController, ARSessionDelegate {
             
         default:
             self.renderer.showConfi()
+            print("call")
             break
         }
     }
